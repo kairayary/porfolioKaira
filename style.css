@@ -3,11 +3,14 @@
     align-items: center;
     background: #f9f9f9;
     justify-content: space-between;
-    align-items: center;
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+  
  
 }
 .navbar_container_menu{
     display: flex;
+    text-align: center;
 }
 
 .container_menu_item{
@@ -33,4 +36,36 @@
 
 .menu_link:hover{
     text-decoration: underline;
+}
+
+.banner, .about{
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    margin-top: 2rem;
+}
+.banner_container{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center
+}
+
+.banner_titulo, .banner_subtitulo{
+    text-align: center;
+    font-weight: 900;
+}
+.banner_menu{
+    display: flex;
+}
+
+.banner_menu_item{
+    list-style: none;
+}
+
+.banner_img{
+    border-radius: 10rem;
+}
+
+.about_descripcion{
+    text-align: justify;
 }
