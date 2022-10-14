@@ -1,3 +1,8 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 .navbar{ 
     display: flex;
     align-items: center;
@@ -5,6 +10,7 @@
     justify-content: space-between;
     padding-inline-start: 2rem;
     padding-inline-end: 2rem;
+    height: 60px;
   
  
 }
@@ -38,10 +44,11 @@
     text-decoration: underline;
 }
 
-.banner, .about{
+.banner, .about, .skills{
     padding-inline-start: 2rem;
     padding-inline-end: 2rem;
     margin-top: 2rem;
+    height: calc(100vh-60px);
 }
 .banner_container{
     display: flex;
@@ -51,6 +58,7 @@
 }
 
 .banner_titulo, .banner_subtitulo{
+   
     text-align: center;
     font-weight: 900;
 }
@@ -67,5 +75,22 @@
 }
 
 .about_descripcion{
+   
     text-align: justify;
+}
+
+.skills_container{
+    display: grid;
+    grid-template-areas: "skill_items";
+    grid-template-columns: auto;
+    grid-template-rows: 2.5rem  auto auto;
+}
+
+.skills_items{
+    display: grid;
+    grid-area: skill_items;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    
+
 }
