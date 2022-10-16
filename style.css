@@ -44,11 +44,12 @@
     text-decoration: underline;
 }
 
-.banner, .about{
+.banner, .about, .skills, .hobbies{
     height: 300px;
     padding: 2rem;
     margin-top: 2rem;
     height: calc(100vh-60px);
+    border-bottom:1px solid #dcdcdc;
 }
 .banner_container{
 
