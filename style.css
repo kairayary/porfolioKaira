@@ -54,7 +54,8 @@
     display: flex;
     justify-content: space-around;
     align-content: space-around;
-    align-items: center
+    align-items: center;
+    line-height: 1.5;
 }
 
 .banner_titulo, .banner_subtitulo{
@@ -79,18 +80,56 @@
     text-align: justify;
 }
 
-.skills_container{
-    display: grid;
-    grid-template-areas: "skill_items";
-    grid-template-columns: auto;
-    grid-template-rows: 2.5rem  auto auto;
-}
 
-.skills_items{
-    display: grid;
-    grid-area: skill_items;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.33% 33.33% 33.33%;
+.skills__contenido {
+    display: flex;
+    flex-wrap:nowrap;
+    padding: 1rem 0rem;
     
-
 }
+
+.skills__card {
+    background: #fdfdfd;
+    display: grid;
+    grid-template-areas: 
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;
+    grid-template-rows: 173px auto;
+    margin-right: 1rem;
+    border: 1px solid #dcdcdc;
+    width: calc(20% - 1rem);
+}
+
+.skills__card:last-child {
+    margin-right: 0;
+}
+
+.skills__card___imagen {
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills__card___base {
+    display: grid;
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;
+    grid-template-areas: 
+        "card-header"
+        "card-contenido";
+    grid-template-rows: 50px auto;
+    align-items: center;
+    justify-items: center;
+    padding: .75rem;
+}
+
+
+
+.skills__titulo {
+    font-weight: 500;
+}
+
