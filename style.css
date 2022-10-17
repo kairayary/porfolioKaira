@@ -14,16 +14,16 @@
   
  
 }
-.navbar_container_menu{
+.navbar_container_menu, .banner_menu{
     display: flex;
     text-align: center;
 }
 
-.container_menu_item{
+.container_menu_item, .banner_menu_item{
     list-style: none;
 }
 
-.container_menu_item:last-child{
+.container_menu_item, .banner_menu_item:last-child{
     margin-right: 0;
 }
 
@@ -60,13 +60,19 @@
     line-height: 2;
 }
 
-.banner_titulo, .banner_subtitulo,.about_titulo, .skills__titulo, .hobbies__titulo{
+.banner_titulo, .banner_subtitulo,.about_titulo, .skills__titulo, .hobbies__titulo, .formacion__titulo{
    
     text-align: center;
     font-weight: 900;
 }
 .banner_menu{
     display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner_menu:hover{
+    text-decoration:underline;
 }
 
 .banner_menu_item{
@@ -81,9 +87,9 @@
 .about_descripcion{
    
     text-align: justify;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     line-height: 2;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 
@@ -110,11 +116,11 @@
     
 }
 
-.skills__card, .hobbies__card:last-child {
+.skills__card, .hobbies__card, .formacion__card:last-child {
     margin-right: 0;
 }
 
-.skills__card___imagen {
+.skills__card___imagen, .formacion__card___imagen {
     grid-area: card-imagem;
     height: 100%;
     width: 100%;
@@ -123,7 +129,7 @@
     justify-content: center;
 }
 
-.skills__card___base, .hobbies__card___base {
+.skills__card___base, .hobbies__card___base{
     display: grid;
     grid-area: card-corpo;
     grid-row-gap: .5rem;
@@ -137,28 +143,75 @@
 }
 
 
-
-.skills__titulo {
-    font-weight: 500;
-}
-
-.hobbies__contenido {
+.hobbies__contenido, .formacion__contenido {
     display: flex;
     flex-wrap:nowrap;
     padding: 4rem 2rem;
   
 }
-.hobbies__card {
+.hobbies__card{
     background: #fdfdfd;
     display: grid;
     grid-template-areas: 
         "card-imagem"
         "card-corpo";
     grid-template-columns: 100%;
-    grid-template-rows: 110px auto;
+    grid-template-rows: 120px auto;
     margin-right: 1rem;
     border: 1px solid #dcdcdc;
     width: calc(100% - 2rem);
     align-items: center;
     justify-items: center;
+    }
+
+    .formacion_academica {
+        padding: 3rem 0;
+    }
+    .formacion__descripcion{
+        justify-content: center;
+    }
+    .formacion__card {
+        background: #fdfdfd;
+        display: grid;
+        grid-template-areas: 
+            "card-imagem"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 120px auto;
+        margin-right: 1rem;
+        border: 1px solid #dcdcdc;
+        width: calc(100% - 2rem);
+        align-items: start;
+        justify-items: center;
+        }
+
+    .formacion__card___base {
+        display: grid;
+        grid-area: card-corpo;
+        grid-row-gap: .5rem;
+        grid-template-areas:
+            "card-header"
+            "card-contenido";
+        grid-template-rows: 30px auto;
+        align-items: center;
+        justify-items: center;
+        padding: .5rem;
+    }
+
+   .formacion__card___header{
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+    }
+        
+    .formacion__card___descripcion {
+        color: #333333;
+        line-height: 1.5;
+        margin: 1rem 0;
+        text-align: justify;
+    }
+   
+    .formacion__card___data {
+        color: #808080;
+        font-size: .9rem;
     }
