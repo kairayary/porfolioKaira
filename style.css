@@ -45,19 +45,16 @@
     text-decoration: underline;
 }
 
-.banner, .about, .skills, .hobbies{
-
+.banner, .about, .skills, .hobbies, .contactos{
+    background: #f5eded;
     height: 400px;
     padding: 2rem;
-    height: calc(100vh-70px);
-   
+    height: calc(100vh-70px);   
 }
 
-.banner{
-    background: #f6f7fb;
-}
+
 .banner_container{
-    
+    margin-top: 4rem;
     display: flex;
     justify-content: space-around;
     align-content: space-around;
@@ -65,8 +62,8 @@
     line-height: 2;
 }
 
-.banner_titulo, .banner_subtitulo,.about_titulo, .skills__titulo,.proyectos__titulo, .hobbies__titulo, .formacion__titulo{
-   
+.banner_titulo, .banner_subtitulo,.about_titulo, .skills__titulo,.proyectos__titulo, .hobbies__titulo, .formacion__titulo, .contacto__titulo{
+    margin-top: 4rem;
     text-align: center;
     font-weight: 900;
 }
@@ -121,20 +118,17 @@
     border: 2.5px solid #fd9d10;
 }
 
-.about{
-    background: #02B54F;
-}
 .about_descripcion{
-    color: #f7eaea;
+    color: #2e2d2d;
     font-size: 1.25em;
     text-align: justify;
-    margin-top: 2rem; 
+    margin-top: 4rem; 
     line-height: 2;
     padding: 1.5rem;
 }
 
 .formacion_academica, .hobbies{
-    background: #fd9d10;
+    background: #f5eded;
     
 }
 
@@ -251,7 +245,7 @@
 }
 
 .proyecto{
-    
+    background: #f5eded;
     text-align: center;
     padding: 3em;
 
@@ -280,9 +274,9 @@
     background-color: #f6f7fb;
     border: 2px solid #02B54F;
     border-radius: 8px;
-    width: 260px;
-    margin: 10px;
-    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
     transition: 0.2s;
    justify-content: center;
 }
@@ -302,27 +296,11 @@
     color:#02B54F;
    
 }
-@media(max-width: 580px){
-    .proyecto{
-        padding-top: 5em;
-        padding-bottom: 6em;
-        width: 34em;
-    
-    }
-     
-   }
 
-   @media(max-width: 710px){
-    .proyecto{
-        padding-top: 5em;
-        padding-bottom: 6em;
-    
-    }
-     
-   }
 .hobbies__contenido, .formacion__contenido {
     display: flex;
     flex-wrap:nowrap;
+    margin-top: 2rem;
     padding: 4rem 2rem;
   
 }
@@ -342,6 +320,117 @@
     justify-items: center;
 }
 
+.contacto{
+    display: flex;
+}
+
+.img-contacto {   
+    display: flex;
+    background: #f5eded;
+    width: 100%;
+    height: 100%;
+    min-width: 340px;
+    min-height: 400px;
+}
+
+
+.contacto-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: center;
+    border-radius: 1em;
+    margin: auto;
+    min-width: 280px;
+    max-width: 2000px;
+}
+
+.form {
+    display: flex;
+    min-width: 300px;
+    max-width: 1000px;
+    min-height: 350px;
+    flex: 1;
+    text-align: center; 
+    padding: 1.8em;
+    order: 2;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form__input {
+    width: 100%; 
+    padding: 0.2em;
+    margin: 0.2em 0; 
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #2e2e31;
+    border-bottom: 2px solid #fd1126;
+    font-size: 20px;
+    max-width: 600px;
+}
+
+.form__input:focus {
+    background: linear-gradient(to bottom, transparent, #dd4a56);
+    border-bottom: 2px solid #fd1126;
+}
+
+.form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.form-img {
+    flex: 1;  
+    display: flex; 
+    padding: 0.6em;
+    min-width: 300px;
+    max-height: 600px ;
+}
+
+.form-img div {
+    padding: 1.3em;
+}
+
+.img-container {
+    margin: auto;
+}
+
+.img-container div {
+    border-radius:8px;
+    border: 2px solid #fd1126;
+    text-align: center;
+    padding: 4.5em;
+}
+
+.form-img img {
+    width: 100%;
+}
+
+input[type="submit"] {
+    outline: none;
+    background: #fd1126;
+    cursor: pointer;
+    border-bottom: none;
+    padding: 0.5em;
+}
+
+input[type="submit"]:hover {
+    border-bottom: none;
+    background: #fd1126;
+}
+
+input[type="submit"]:active {
+    border-bottom: none;
+    background: linear-gradient(to bottom, #dd4a56, #e91b2c);
+}
+
 .footer-contet{
     display: flex;
     flex-direction: column;
@@ -349,11 +438,25 @@
     font-weight: bold;
     padding: 2em;
     background:#02B54F;
-    justify-content: center
+    justify-content: center;
 }
+/* RESPONSIVE */
 
-.iconos{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
+@media(max-width: 360px){
+    .proyecto{
+        padding-top: 5em;
+        padding-bottom: 6em;
+        width: 34em;
+    
+    }
+     
+   }
+
+   @media(max-width: 710px){
+    .proyecto{
+        padding-top: 5em;
+        padding-bottom: 6em;
+    
+    }
+     
+   }
