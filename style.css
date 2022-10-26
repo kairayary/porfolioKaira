@@ -494,9 +494,7 @@ input[type="submit"]:active {
     border-bottom: none;
     background: linear-gradient(to bottom, #dd4a56, #b5c5bc);
 }
-/* VALIDACIÓN */
-/* --form-ok-color:#02B54F;
-   --form-error-color:#fd9d10; */
+
 .input-error{
     margin-top: 1rem;
     font-size: 80%;
