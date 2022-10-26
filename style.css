@@ -162,6 +162,7 @@
     width: calc(100% - 2rem);
     align-items: start;
     justify-items: center;
+    box-shadow: 5px 5px 10px #b5b9b7, -5px -5px 15px #b5c5bc;
 }
 
 .formacion__card___base {
@@ -240,6 +241,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 10px #b5b9b7, -5px -5px 15px #b5c5bc;
 }
 
 
@@ -279,7 +281,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-  
+    
 }
 
 
@@ -289,7 +291,8 @@
     flex-wrap: wrap;
     margin-top: 40px;
     justify-content: center;
-    padding: 4rem 2rem 4rem 2rem
+    padding: 4rem 2rem 4rem 2rem;
+   
 }
 
 .proyectos__card{
@@ -302,6 +305,7 @@
     padding: 15px;
     transition: 0.2s;
    justify-content: center;
+   box-shadow: 5px 5px 10px #b5b9b7, -5px -5px 15px #b5c5bc;
 }
 
 
@@ -357,6 +361,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 10px #b5b9b7, -5px -5px 15px #b5c5bc;
 }
 
 
@@ -421,7 +426,7 @@
     margin: auto;
 }
 
-.form__input {
+.input {
     width: 100%; 
     padding: 0.2em;
     margin: 0.2em 0; 
@@ -434,9 +439,9 @@
     max-width: 600px;
 }
 
-.form__input:focus {
-    background: linear-gradient(to bottom, transparent, #dd4a56);
-    border-bottom: 2px solid #fd1126;
+.input:focus {
+    background: linear-gradient(to bottom, transparent, #b5c5bc);
+    border-bottom: 2px solid #b5c5bc;
 }
 
 .form textarea {
@@ -465,6 +470,7 @@
     border: 2px solid #fd1126;
     text-align: center;
     padding: 4.5em;
+    box-shadow: 5px 5px 10px #b5b9b7, -5px -5px 15px #b5c5bc;
 }
 
 .form-img img {
@@ -486,9 +492,34 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
     border-bottom: none;
-    background: linear-gradient(to bottom, #dd4a56, #e91b2c);
+    background: linear-gradient(to bottom, #dd4a56, #b5c5bc);
+}
+/* VALIDACIÓN */
+/* --form-ok-color:#02B54F;
+   --form-error-color:#fd9d10; */
+.input-error{
+    margin-top: 1rem;
+    font-size: 80%;
+    background-color:#fd9d10; ;
+    color: #fff;
+    transition: all 800ms ease;
+   
 }
 
+.form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+.form__section[required]:valid{
+    border: thin solid var(--form-Ok-color);
+}
+
+.form__section[required]:invalid{
+    border: thin solid var(--form-error-color);
+}
 .footer-contet{
     display: flex;
     flex-direction: column;
@@ -540,7 +571,7 @@ input[type="submit"]:active {
     
     .about_descripcion{
       
-     font-size: 1.175em;
+     font-size: 1.1em;
      text-align: justify;
      padding: 1rem 1rem 1rem 1rem;
      line-height: 1.3;

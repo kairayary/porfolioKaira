@@ -67,7 +67,7 @@
     </section>
     <section id="About" class="about">
         <h1 class="about_titulo">SOBRE MI</h1>
-        <p class="about_descripcion">Ing. Mecánico, motivada por la capacidad de interpretación y la curiosidad por el
+        <p class="about_descripcion"> Soy Ing. Mecánico de profesión, venezolana, madre, esposa, amante de las plantas. Motivada por la capacidad de interpretación y la curiosidad por el
             mundo IT, me inicie en la formación, aprendizaje y adquisición de conocimiento para el desarrollo de
             aplicaciones Web, con las herramientas básicas de programación.<br>
             Soy una persona con actitud positiva, disponibilidad inmediata, ganas de aprender y a la vez aportar los
@@ -276,19 +276,27 @@
                                 Complete el siguiente formulario y me pondre en contacto a la brevedad posible
                             </div>
                             <div class="form__section">
-                                <input type="text" class="form__input" placeholder="Nombre">
+                                <input name="name"  type="text" class="input" placeholder="Nombre" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"  title="Sólo permite letras y espacios en blanco, contener entre 1 a 50 caracteres.">
+                                <span id="name" class="input-message-error"></span>
                             </div>
                             <div class="form__section">
-                                <input type="email" class="form__input" placeholder="Email">
+                                <input name="email"  type="email" class="input" placeholder="Email"  required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="El correo no es válido">
+                                <span id="email" class="input-message-error"></span>
                             </div>
                             <div class="form__section">
-                                <input type="email" class="form__input" placeholder="Asunto">
+                                <input name="asunto"  type="text" class="input" placeholder="Asunto" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Sólo permite letras y espacios en blanco, contener entre 1 a 50 caracteres.">
+                                <span id="asunto" class="input-message-error"></span>
                             </div>
                             <div class="form__section">
-                                <textarea class="form__input" placeholder="Mensaje"></textarea>
+                                
+                                <textarea class="input" placeholder="Mensaje" required  data-pattern="^.{1,250}$" title="El mensaje debe contener máximo 300 caracteres" ></textarea>
+                                <span class="input-message-error"></span>
                             </div>
                             <div class="form__section">
-                                <input type="submit" class="form__input">
+                                <input type="submit" class="input" value="Enviar"></a>
+                            </div>
+                            <div class="contacto-form-respuesta">
+                                <p>Los datos han sido enviados</p>
                             </div>
                         </div>
                     </form>
@@ -314,7 +322,7 @@
 
         </div>
     </footer>
-
+    <script src="./app.js" type="module"></script>
 </body>
 
 </html>
